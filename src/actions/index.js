@@ -17,10 +17,13 @@ export const passwordChanged = text => ({
 });
 
 const loginUserSuccess = (dispatch, user) => {
+  debugger;
   dispatch({ type: LOGIN_USER_SUCCESS, payload: user });
 };
+
 const loginUserFail = (dispatch, error) => {
-  dispatch({ type: LOGIN_USER_FAIL, payload: error });
+  debugger;
+  dispatch({ type: LOGIN_USER_FAIL, payload: error.message });
 };
 
 export const loginUser = ({ email, password }) => (dispatch) => {
